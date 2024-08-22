@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Listener</title>
+</head>
+<body>
+    <h1>Página com Listener</h1>
+    <p>Página com vários eventos</p>
+    <button id="myBtn">Tentar Aqui</button>
+    <p id="demo"></p>
+
+    <script>
+        const element = document.getElementById("myBtn")
+        element.addEventListener("click", FuncaoClick)
+        element.addEventListener("mouseover", FuncaoMouseOver)
+        element.addEventListener("mouseout", FuncaoMouseOut)
+
+        function FuncaoClick(){
+            document.getElementById("demo").innerHTML += "Clicado <br>"
+        }
+
+        function FuncaoMouseOver(){
+            document.getElementById("demo").innerHTML += "Mouse Over <br>"
+        }
+
+        function FuncaoMouseOut(){
+            document.getElementById("demo").innerHTML += "Mouse Out <br>"
+        }
+    </script>
+</body>
+</html>

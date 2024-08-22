@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>
+            download
+        </title>
+    </head>
+    <body>
+        <a download="Teste de JS" href="#" id="link">Download</a>
+        <script>
+           let blob = new Blob(["Bem vindo"], {type: "text/plain"});
+           link.href = URL.createObjectURL(blob);
+        </script>
+    </body>
+</html>

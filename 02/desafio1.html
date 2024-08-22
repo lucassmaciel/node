@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Radio Button </title>
+    </head>
+    <body>
+        <form id="id_form" method="post"> 
+            <p>Selecione a sua marca de veículo favorita</p>
+            <input type="radio" id="bmw" name="marca" value="bmw">
+            <label for="bmw">BMW</label><br>
+            <input type="radio" id="mercedes" name="marca" value="mercedes">
+            <label for="mercedes">Mercedes</label><br>
+            <input type="radio" id="ferrari" name="marca" value="ferrari">
+            <label for="ferrari">Ferrari</label><br>
+            <input type="radio" id="mclaren" name="marca" value="mclaren">
+            <label for="mclaren">McLaren</label><br><br>
+
+            <button id="btn"> Confirmar </button>
+        </form>
+        <script>
+            const btn = document.querySelector('#btn');
+            const sb = document.querySelector('#id_form');
+
+            btn.onclick = (event) => {
+                event.preventDefault();
+                alert(sb.selectedIndex);
+            }
+
+        </script>
+    </body>
+</html>

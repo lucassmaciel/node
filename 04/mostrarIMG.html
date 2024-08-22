@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            download
+        </title>
+    </head>
+    <body>
+        <input type="file" accept="image/*" onchange="openfile(event)">
+        <br>
+        <img id="output">
+        <script>
+            var openfile = function(event){
+                var input = event.target;
+                var reader = new FileReader();
+                reader.onload = function(){
+                    var dataURL = reader.result;
+                    var output = document.getElementById("output");
+                    output.src = dataURL;
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        </script>
+    </body>
+</html>
