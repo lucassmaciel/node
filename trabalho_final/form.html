@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="alunoForm" action="/submit" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required>
+
+        <label>Sexo:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="sexo" value="Masculino" required> Masculino</label>
+            <label><input type="radio" name="sexo" value="Feminino" required> Feminino</label>
+        </div>
+
+        <label for="cidade">Cidade:</label>
+        <select id="cidade" name="cidade" required>
+            <option value="Manaus">Manaus</option>
+            <option value="Belém">Belém</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Vilhena">Vilhena</option>
+            <option value="Itajaí">Itajaí</option>
+        </select>
+
+        <label>Escolaridade:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="escolaridade" value="Fundamental" required> Fundamental</label>
+            <label><input type="radio" name="escolaridade" value="Médio" required> Médio</label>
+            <label><input type="radio" name="escolaridade" value="Superior" required> Superior</label>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
